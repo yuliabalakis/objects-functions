@@ -5,12 +5,11 @@ const car1 = {
     color: "black"
 };
 car1.color = "green";
-car1.power = 100;
-function power(){
-    console.log(car1.power)
+car1.power = function powerOfMotor(){
+    console.log(100);
 }
 console.log(car1.color);
-power();
+car1.power();
 
 /* - Pears and apples are accepted to the warehouse, write a function 
 that returns the result of adding the number of accepted pears and apples */
@@ -33,11 +32,11 @@ name in the terminal (if you entered your name, then hello + name, if not, then 
   sayHi("John");
 
   /* - Write a function for calculating the type of argument and type output to the console */
-  let a = "10";
-  function type(){
-      console.log(typeof a);
+  /* let a = "10"; */
+  function type(title){
+      console.log(typeof title);
   }
-  type();
+  type("3");
    
 /*   - Write a function that determines whether a number is prime or not */
  
@@ -45,8 +44,7 @@ name in the terminal (if you entered your name, then hello + name, if not, then 
       for (let i = 2; i < num; i++){
           if (num % i ===0){
               return false;
-              break;
-          }
+            }
       }
          return num > 1;
     }
