@@ -1,64 +1,53 @@
+/* - Create a car object, add a color property to it with the value equals 'black' */
+/* - Change the color property of the car object to 'green' */
+/* - Add the power property to the car object, which is a function and displays the engine power to the console */
 const car1 = {
     color: "black"
 };
+car1.color = "green";
+car1.power = 100;
+function power(){
+    console.log(car1.power)
+}
 console.log(car1.color);
+power();
 
-const car2 = {
-    color: "black"
-};
-car2.color = "green";
-console.log(car2.color);
-
-let car3 = {
-    color: "green",
-    power(){
-        console.log(100)
-    }
-};
-car3.power();
-
-let car = {
-    color: "green",
-    power
-};
-    function power(powerCar){
-    return powerCar;
-};
-const result = power(100);
-console.log("resuilt is: ", result);
-
-
+/* - Pears and apples are accepted to the warehouse, write a function 
+that returns the result of adding the number of accepted pears and apples */
 function sum(pers, apples){
     return pers + apples;
 }
 const result1 = sum(5, 10);
 console.log(result1);
 
-let name1 = "John";
-function sayHi() {
-    if (name1=="John") {
-      console.log("Hello, " + name1);
+/* - Your name is saved in the payment terminal, write a function to define the 
+name in the terminal (if you entered your name, then hello + name, if not, then there is no such name) */
+
+    function sayHi(userName) {
+        if (userName=="John") {
+      console.log("Hello, " + userName);
     } else {
       console.log("No such name"); 
     }
   };
-  sayHi();
+  sayHi("John");
 
+  /* - Write a function for calculating the type of argument and type output to the console */
   let a = "10";
   function type(){
       console.log(typeof a);
   }
   type();
    
-  let num = 11;
-  let flag = true;
-  function isPrime() {
-        for (let i = 2; i < num; i++) {
-        if (num % i == 0) {
-            flag = false;
-            break;
+/*   - Write a function that determines whether a number is prime or not */
+ 
+  function isPrime(num){
+      for (let i = 2; i < num; i++){
+          if (num % i ===0){
+              return false;
+              break;
+          }
+      }
+         return num > 1;
     }
-} 
-console.log(flag);
-  }
-  isPrime();
+ console.log(isPrime(1));
