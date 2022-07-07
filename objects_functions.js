@@ -23,7 +23,7 @@ console.log(result1);
 name in the terminal (if you entered your name, then hello + name, if not, then there is no such name) */
 
     function sayHi(userName) {
-        if (userName=="John") {
+        if (userName === "John") {
       console.log("Hello, " + userName);
     } else {
       console.log("No such name"); 
@@ -41,11 +41,19 @@ name in the terminal (if you entered your name, then hello + name, if not, then 
 /*   - Write a function that determines whether a number is prime or not */
  
   function isPrime(num){
-      for (let i = 2; i < num; i++){
-          if (num % i ===0){
+      for (let i = 2, max = Math.sqrt(num); i <= max; i++){
+          if (num % i === 0){
               return false;
             }
       }
          return num > 1;
     }
- console.log(isPrime(1));
+ console.log(isPrime(11));
+
+ 
+ const prime = n => {
+   const bound = Math.floor(Math.sqrt(n));
+   for (i = 2; i <= bound; i++) if (n % i === 0) return false;
+   return n > 1;
+ }
+ console.log(prime(11));
